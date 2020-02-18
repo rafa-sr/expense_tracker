@@ -1,4 +1,4 @@
-require_relative '../../app/api.rb'
+  require_relative '../../app/api.rb'
 require 'rack/test'
 require 'json'
 
