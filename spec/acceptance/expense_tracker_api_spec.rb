@@ -19,6 +19,8 @@ module ExpenseTracker
       expenses.merge('id' => parsed['expense_id'])
     end
 
+    let(:last_response_to_json) { JSON.parse(last_response.body) }
+
     it 'records submitted expenses' do
       pending 'need to persist expenses'
       coffee = post_expenses(
@@ -41,10 +43,9 @@ module ExpenseTracker
 
       get 'expenses/2017-06-10'
       expect(last_response.status).to eq(200)
-      expeneses = JSON.parse(last_response.body)
                             #check that array contains 2 expeneses, no matter the other
                             # it can be done wit eq[coffee,zoo] if the order matters
-      expect(expeneses).to contain_exactly(coffee,zoo)
+      expect(last_response_to_json).to contain_exactly(coffee,zoo)
     end
   end
 end
