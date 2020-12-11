@@ -41,7 +41,6 @@ module ExpenseTracker
           'date'    => '2007-06-11'
       )
 
-      get 'expenses/2017-06-10'
       expect(last_response.status).to eq(200)
                             #check that array contains 2 expeneses, no matter the other
                             # it can be done wit eq[coffee,zoo] if the order matters

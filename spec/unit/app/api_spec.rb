@@ -60,7 +60,34 @@ module ExpenseTracker
           expect(last_response.status).to eq(422)
         end
       end
+    end
 
+    describe 'GET /expenses/:date' do
+      context 'when the expense exist for the given date' do
+        it 'return the expense as JSON' do
+          coffee = post_expenses(
+            'payee'   =>    'Starckbucks',
+            'Amount'  => '5.75',
+            'date'    =>'2017-06-10'
+          )
+
+          get 'expenses/2020-02-5'
+
+          expect(last_response.body).to eq coffee
+        end
+
+        it 'responds a 200 code (OK)' do
+          get 'expenses/2017-06-10'
+
+          expect(last_response.status).to eq 200
+        end
+      end
+
+      context 'when there is not expense for the given date' do
+        it 'return an empty array as JSON'
+
+        it 'responds with a 200 (OK)'
+      end
     end
   end
 end

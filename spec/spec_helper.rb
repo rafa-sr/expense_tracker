@@ -99,5 +99,8 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 
   config.filter_gems_from_backtrace 'rack','rack-test','sequel','sinatra'
-
+  #tag with db
+  config.when_first_matching_example_defined(:db) do
+    require_relative 'support/db'
+  end
 end
