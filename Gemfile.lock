@@ -9,8 +9,8 @@ GEM
     parallel (1.20.1)
     parser (2.7.2.0)
       ast (~> 2.4.1)
-    rack (2.1.1)
-    rack-protection (2.0.2)
+    rack (2.2.3)
+    rack-protection (2.2.0)
       rack
     rack-test (0.7.0)
       rack (>= 1.0, < 3)
@@ -47,12 +47,12 @@ GEM
       rubocop (~> 1.0)
       rubocop-ast (>= 1.1.0)
     ruby-progressbar (1.10.1)
-    ruby2_keywords (0.0.2)
+    ruby2_keywords (0.0.5)
     sequel (4.48.0)
-    sinatra (2.0.2)
+    sinatra (2.2.0)
       mustermann (~> 1.0)
-      rack (~> 2.0)
-      rack-protection (= 2.0.2)
+      rack (~> 2.2)
+      rack-protection (= 2.2.0)
       tilt (~> 2.0)
     sqlite3 (1.4.2)
     tilt (2.0.10)
@@ -69,7 +69,7 @@ DEPENDENCIES
   rubocop-gemfile
   rubocop-rspec
   sequel (= 4.48.0)
-  sinatra (= 2.0.2)
+  sinatra (= 2.2.0)
   sqlite3
 
 RUBY VERSION
